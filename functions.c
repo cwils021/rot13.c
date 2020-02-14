@@ -46,3 +46,34 @@ void bothFlags_encrypt(char *readfile, char *writefile){
 
     printf("%s has been encrpyted to file %s\n", readfile, writefile);
 }
+char* get_readfile(int argc, char** argv){
+    char *readfile = NULL;
+
+    if (argc > 1 && argc < 6){
+        for(int i = 1; i < argc; i++){
+            if(strcmp(argv[i], "-F") == 0){
+                readfile = argv[i + 1];
+                break;
+
+            }
+        }
+    }
+
+    return readfile;
+}
+
+char* get_writefile(int argc, char** argv){
+    char *writefile = NULL;
+
+    if (argc > 1 && argc < 6){
+        for(int i = 1; i < argc; i++){
+            if(strcmp(argv[i], "-O") == 0){
+                writefile = argv[i + 1];
+                break;
+
+            }
+        }
+    }
+
+    return writefile;
+}

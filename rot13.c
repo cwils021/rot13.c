@@ -14,8 +14,11 @@ int main(int argc, char** argv){
         exit(0);
     }
 
-    readfile = argv[1];
-    writefile = argv[2];
+    readfile = get_readfile(argc, argv);
+    writefile = get_writefile(argc, argv);
+
+    printf("read: %s, write: %s\n", readfile, writefile);
+
 
     bothFlags_encrypt(readfile, writefile);
 
