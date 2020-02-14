@@ -1,3 +1,6 @@
+#ifndef FUNCTIONS_H
+#define FUNCTIONS_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -17,3 +20,5 @@ void encrypt_from_console(char *writefile);
 void encrpyt_to_from_console();
 
 int choose_case(char *readfile, char *writefile);
+
+#endif
