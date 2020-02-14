@@ -8,6 +8,12 @@ int main(int argc, char** argv){
 
     char *readfile, *writefile;
 
+    if (argc > 5){
+        printf("Too many arguments given\n");
+        printf("\n");
+        exit(0);
+    }
+
     readfile = argv[1];
     writefile = argv[2];
 
